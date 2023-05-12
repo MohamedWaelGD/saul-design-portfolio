@@ -1,0 +1,22 @@
+<section id="projects" class="position-relative">
+    <div id="projects-background"></div>
+    <div class="container-lg d-flex flex-column justify-content-center py-5" style="min-height: 80vh;">
+        <div class="d-flex flex-column gap-4 animate-left">
+            <h1 style="font-size: 3rem;">My recent <span class="text-secondary">works</span></h1>
+            <div class="d-flex gap-4 flex-wrap">
+                <div *ngFor="let category of categories">
+                    <p class="category" (click)="selectCategory(category)" [ngClass]="{'active': category === selectedCategory}">
+                        {{category}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap animate-bottom">
+            <div class="col-12 col-sm-6 col-lg-4 p-2" style="height: inherit;" *ngFor="let project of showedProjects">
+                <div class="project p-4 h-100">
+                    <img [src]="project.img" class="w-100 h-100" style="object-fit: cover;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

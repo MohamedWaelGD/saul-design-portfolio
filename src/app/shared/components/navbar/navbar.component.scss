@@ -1,0 +1,47 @@
+@import '../../../../styles.scss';
+
+.navbar {
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+}
+
+.navbar-brand, .nav-link.active {
+    transition: color .2s;
+}
+
+.navbar-brand:hover {
+    color: $secondary !important;
+}
+
+.nav-link.active {
+    color: $secondary !important;
+}
+
+.show-fixed-nav {
+    animation: animate_to_down 1s;
+    animation-fill-mode: both;
+
+}
+
+.hide-fixed-nav {
+    animation: animate_to_top 1s;
+    animation-fill-mode: both;
+
+}
+
+@keyframes animate_to_down {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0%;
+    }
+}
+
+@keyframes animate_to_top {
+    from {
+        top: 0%;
+    }
+    to {
+        top: -100%;
+    }
+}

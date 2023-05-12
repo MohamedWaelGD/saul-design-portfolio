@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: #00ADB5;
+$secondary: #00ADB5;
+$dark: #222831;
+$dark_secondary: #393E46;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    padding: 100px 0px; /* Height of navbar */
+}
+
+.navbar-brand {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: $dark;
+    color: white;
+}
+
+body a {
+    color: white !important;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 5px black;
+}
+
+input, textarea {
+    background-color: rgba($color: $dark_secondary, $alpha: 1.0) !important;
+    border: none !important;
+    outline-color: $primary !important;
+    border-radius: 15px !important;
+    padding: 10px 15px !important;
+}

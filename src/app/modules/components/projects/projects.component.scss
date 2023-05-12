@@ -1,0 +1,57 @@
+@import '../../../../styles.scss';
+
+#projects-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url('/assets/images/doodle items.svg');
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.category {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 5px black;
+    border-radius: 100px;
+    font-weight: 500;
+    background-color: rgba($color: #fff, $alpha: .1);
+    backdrop-filter: blur(10px);
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.category.active, .category:hover {
+    background-color: rgba($color: $primary, $alpha: 1);
+}
+
+.project {
+    border-radius: 5px;
+    background-color: rgba($color: #fff, $alpha: .2);
+    backdrop-filter: blur(10px);
+    transition: transform .2s;
+    cursor: pointer;
+    animation: fade_in 1s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 3rem !important;
+    }
+}
